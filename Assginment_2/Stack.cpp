@@ -1,21 +1,4 @@
-#include<iostream>
-#define MAX_ITEMS 100
-using namespace std;
-
-class Stack {
-private:
-	int top;
-	int items[MAX_ITEMS];
-public:
-	Stack();
-	~Stack();
-	void makeEmpty();
-	bool isEmpty() const;
-	bool isFull()const;
-	void push(int newItem);
-	void pop();
-	int getTop();
-};
+#include "Stack.h"
 
 Stack::Stack()
 {
@@ -54,6 +37,6 @@ void Stack::pop()
 
 int Stack::getTop()
 {
-	if (!isEmpty())
+	if (!isEmpty()) 
 		return items[top];
 }
